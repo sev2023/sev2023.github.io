@@ -63,7 +63,7 @@ html {font-family: Arial, Helvetica, sans-serif;
     background-image: url("../images/blue-sky-long.png");
     background-size: cover;
     animation-name: clouds;
-    animation-duration: 180s;
+    animation-duration: 120s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
