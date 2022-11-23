@@ -40,6 +40,9 @@ html {font-family: Arial, Helvetica, sans-serif;
     padding-top: 18px;
     padding-bottom: 20px;
     float: right;
+    width: 60%;
+    display: flex;
+    justify-content:space-between;
 }
 #nav a, #footer a{
     font-size: 1.2rem;
@@ -52,7 +55,7 @@ html {font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* ------------------------ CLOUD EFFECT -------------------- */
+/* ----------------  CLOUD EFFECT ANIMATION  -------------------- */
 
 .background {
     position: fixed;
@@ -93,6 +96,7 @@ html {font-family: Arial, Helvetica, sans-serif;
     margin-left: 5%;
     text-align: right;
 }
+
 .article{ 
     margin-top: 5%;
     margin-bottom: 12%;
@@ -101,7 +105,8 @@ html {font-family: Arial, Helvetica, sans-serif;
 }
 .article-center {
     text-align: center;
-    margin-bottom: 10%;
+    margin-bottom: 12%;
+    font-family: 'Open Sans';
 }
 .article-text{
     color: #555;
@@ -146,11 +151,27 @@ html {font-family: Arial, Helvetica, sans-serif;
     transform: scale(1.2);
 }
 
+.article-image-div {
+    animation-name: image-open;
+    animation-duration: 1s;
+}
+
+@keyframes image-open {
+    0% { 
+        transform: scale(0.5);
+        opacity: 0.1;
+
+    }
+    100% { 
+        transform: scale(1);
+    }
+}
+
 
 /* ------------------------ FOOTER FORM ----------------------- */
 #footer form {
     color: #fff;
-    margin: 0 20px 40px;
+    margin: 0 10% 40px;
 }
 #footer label {
     display: block;
@@ -182,6 +203,7 @@ html {font-family: Arial, Helvetica, sans-serif;
 
 #footer h2 {
     margin: 20px 0;
+    font-size: 2rem;
 }
 
 #footer .menu {
@@ -245,14 +267,14 @@ html {font-family: Arial, Helvetica, sans-serif;
         line-height: 2rem;
     }
 
-
   } /* end of max-width: 800px */
 
 
   @media only screen and (max-width: 600px) {
 
-    .article {
+    .article, .article-center {
         display: block;
+        text-align: center!important;
         margin-left: 0!important;
         margin-right: 0!important;
     }
