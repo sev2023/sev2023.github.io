@@ -240,10 +240,11 @@ html {font-family: Arial, Helvetica, sans-serif;
         height: 240px;
     }
 
-    .article h1{
-        font-size: 1.6rem;
+    .article h1, .article-center h1{
+        font-size: 1.5rem;
         line-height: 2rem;
     }
+
 
   } /* end of max-width: 800px */
 
