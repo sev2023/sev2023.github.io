@@ -1,0 +1,263 @@
+/* https://www.color-hex.com/color/558c21 */
+*,*:before,*:after { margin: 0; padding: 0;}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Open Sans Bold';
+    src: url('../fonts/OpenSans-Bold.ttf');
+}
+
+html {font-family: Arial, Helvetica, sans-serif;
+    /* background-color: #ccd1bf;  */
+}
+
+/* ------------------------ HEADER ----------------------- */
+#header{
+    width: 100%;
+    background-color: #4c7e1d;
+    position: fixed;
+    z-index: 1000;
+}
+#nav {  
+    width: 80%; 
+    margin: 0 auto;
+    padding: 5px 10px;
+}
+#nav .logo{
+    padding: 5px 0;
+    font-size: 2rem;
+    float: left;
+}
+#nav img {
+    width: 40px;
+    margin: -5px;
+}
+#nav .menu {
+    padding-top: 18px;
+    padding-bottom: 20px;
+    float: right;
+}
+#nav a, #footer a{
+    font-size: 1.2rem;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+}
+#nav .menu a:hover, #footer a:hover{
+    color: #444;
+}
+
+
+/* ------------------------ CLOUD EFFECT -------------------- */
+
+.background {
+    position: fixed;
+    width: 300%;
+    height: 100vh;
+    top: 50px;
+    z-index: -1000;
+    background-image: url("../images/blue-sky-long.png");
+    background-size: cover;
+    animation-name: clouds;
+    animation-duration: 180s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes clouds {
+    0%{left: 0%}
+    100%{left: -200%}
+}
+
+/* ------------------------ MAIN ---------------------------- */
+#main {  
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 80%;
+    margin: 0 auto;
+    padding: 100px 10px;
+    background-image: url("../images/grass-600.png");
+    background-position: bottom;
+    background-repeat: repeat no-repeat;
+    
+}
+
+.article:nth-child(odd){ /* odd / even to left and right articles */
+    margin-right: 5%;
+}
+.article:nth-child(even){
+    margin-left: 5%;
+    text-align: right;
+}
+.article{ 
+    margin-top: 5%;
+    margin-bottom: 12%;
+    display: flex;
+    font-family: 'Open Sans';
+}
+.article-center {
+    text-align: center;
+    margin-bottom: 10%;
+}
+.article-text{
+    color: #555;
+    margin: 0 5%;
+    line-height: 2.4rem;
+}
+.article-text p{
+    margin: 30px 0;
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+}
+.article-text a{
+    color: #fff;
+    background-color: #FFA500;
+    text-decoration: none;
+    display: inline;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+.article-text a:hover{
+    color: #fff;
+    background-color: #d80;
+}
+
+.article-image-div{
+    min-width: 320px;
+    width: 320px;
+    height: 320px;
+    overflow: hidden;
+    border-radius: 160px;
+}
+.article h3 {
+    margin-top: -15px;
+}
+
+/*  ------------- Zoom effect on articles images ------------ */
+.article-image{
+    transition: 0.5s;
+}
+.article-image:hover{
+    transition: 0.5s;
+    transform: scale(1.2);
+}
+
+
+/* ------------------------ FOOTER FORM ----------------------- */
+#footer form {
+    color: #fff;
+    margin: 0 20px 40px;
+}
+#footer label {
+    display: block;
+    margin: 15px 0 5px;
+}
+#footer button {
+    display: block;
+    margin: 15px 0;
+    padding: 5px 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #4C7E1D;
+}
+#footer input, #footer textarea {
+    width: 320px;
+}
+#footer textarea {
+    height: 120px;
+}
+
+
+/* ------------------------ FOOTER ----------------------- */
+#footer {  
+    width: 80%;  
+    margin: 0 auto;
+    padding: 25px 10px;
+    background-color: #62943D;  
+}
+
+#footer h2 {
+    margin: 20px 0;
+}
+
+#footer .menu {
+    float: left;
+}
+#footer .credentials {
+    float: right;
+    margin: 0 2%;
+    font-size: medium;
+}
+.footerLogo {
+    display: block;
+    margin: 25% auto;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+/*  ------------- turning effect on footer logo ------------ */
+.footerLogo {
+    transition: 0.5s;
+}
+.footerLogo:hover {
+    transition: 0.5s;
+    transform: scaleX(1);
+}
+
+.clr {
+    clear: both;
+}
+
+
+/*  ------------- responsive CSS ------------ */
+
+@media only screen and (max-width: 1100px) {
+    
+    #footer .credentials {
+        float: none;
+    }
+
+} /* end of max-width: 1100px */
+
+@media only screen and (max-width: 800px) {
+    
+    #nav .menu {
+        width: 100%;
+        text-align: center;
+        padding-top: 1px;
+    }
+
+    #main {
+        padding-top: 120px;
+    }
+
+    .article-image-div {
+        min-width: 240px;
+        width: 240px;
+        height: 240px;
+    }
+
+    .article h1{
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+
+  } /* end of max-width: 800px */
+
+
+  @media only screen and (max-width: 600px) {
+
+    .article {
+        display: block;
+        margin-left: 0!important;
+        margin-right: 0!important;
+    }
+
+    .article-image-div {
+        margin: 40px auto 90px;
+    }
+
+} /* end of max-width: 600px */
