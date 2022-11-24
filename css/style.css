@@ -234,7 +234,7 @@ html {font-family: Arial, Helvetica, sans-serif;
 
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 860px) {
 
     #nav .menu {
         width: 100%;
@@ -272,7 +272,7 @@ html {font-family: Arial, Helvetica, sans-serif;
 
 
 
-  @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: 720px) {
 
     .article, .article-center {
         display: block;
