@@ -213,7 +213,7 @@ html {font-family: Arial, Helvetica, sans-serif;
 
 .footerLogo {
     float: right;
-    margin: 90px 14%; 0 14%;
+    margin: 90px 10% 0;
 }
 /*  ------------- turning effect on footer logo ------------ */
 .footerLogo img{
