@@ -49,7 +49,10 @@ img {
 
 @keyframes car {
     0% {transform: rotate3d(0, 1, 0, 180deg); z-index: 0;}
-    25% {translate: -280px;}
+    25% {
+        transform: rotate3d(0, 1, 0, 270deg);
+        translate: -280px;
+    }
     50% {transform: perspective(400px) rotate3d(0, 1, 0, 360deg) scale(1.6); z-index: 10;}
     75% {translate: 280px; z-index: 0;}
     100% {transform: rotate3d(0, 1, 0, 540deg);}
