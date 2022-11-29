@@ -1,0 +1,56 @@
+* {
+
+}
+.animate {
+    width: calc(100% - 150px);
+    margin-top: 120px;
+    text-align: center;
+    position: relative;
+}
+
+img {
+    width: 200px;
+    position: absolute;
+    transform: rotate3d(0, 1, 0, 180deg)
+}
+
+
+.cup1{   
+    animation-name: car;
+    animation-duration: 12s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.cup2{
+    animation-name: car;
+    animation-delay: -3s;
+    animation-duration: 12s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.cup3{
+    animation-name: car;
+    animation-delay: -6s;
+    animation-duration: 12s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.cup4{
+    animation-name: car;
+    animation-delay: -9s;
+    animation-duration: 12s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes car {
+    0% {transform: rotate3d(0, 1, 0, 180deg); z-index: 0;}
+    25% {translate: -280px;}
+    50% {transform: perspective(400px) rotate3d(0, 1, 0, 360deg) scale(1.6); z-index: 10;}
+    75% {translate: 280px; z-index: 0;}
+    100% {transform: rotate3d(0, 1, 0, 540deg);}
+}
