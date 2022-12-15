@@ -1,0 +1,456 @@
+*{
+    margin:0; padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Create variables to hold defoult colors */
+:root {
+    --mainColor1:#0088aa;
+    --mainColor2:#7400aa;
+    --mainColor3:#480061;
+
+    --fontColor1:#0000aa;
+    --fontColor2:#eeeeee;
+
+    --titleFont: Arial, Helvetica, sans-serif;
+    --mainFont: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+body{  /* Default <body> setting, font-size not linked to :root!! */
+    background-color: var(--mainColor1);
+    color: var(--fontColor1);
+    font-family: var(--mainFont);
+    font-size: 16px;
+    background-image: url(../images/camol.png);
+}
+
+nav{
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    background-color: var(--mainColor2);
+    color: var(--fontColor2);
+    background-image: url(../images/camo.png);
+}
+
+header{
+    z-index: -1000;
+    position: relative;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+header span{
+    border-bottom: 2px solid #fff;
+    display: inline-block;
+    padding: 10px 10px 15px;
+
+}
+
+#nav-bar {
+    z-index: 1000;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    padding: 15px 5px 0;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+#nav-links{
+    display: flex;
+    list-style-type: none;
+}
+
+
+/* ****************************************** */
+/* **** GENERAL ALL-SITE BUTTON SETTINGS **** */
+
+button{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.4);
+    color:#ddd;
+    height: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 10px 2px;
+    border-radius: 4px;
+    border:1px solid #fff;
+}
+button:hover{
+    background-color: rgba(0, 0, 0, .7);
+    color:#fff;
+}
+
+
+/* ******************************************* */
+/* **** BACK - FORWARD CONTROLS IN HEADER **** */
+
+#nav-links #goBack, #nav-links #goForward{
+    text-shadow: 0px 0px 2px #fff;
+
+}
+#nav-links #goBack:hover{
+    text-shadow: -15px 0px 2px rgba(255, 255, 255, 0);
+    transition: 1s;
+}
+#nav-links #goForward:hover{
+    text-shadow: 15px 0px 2px rgba(255, 255, 255, 0);
+    transition: 1s;
+}
+
+/* **************************** */
+/* **** TOP NAVIGATION BAR **** */
+
+#nav-bar a{
+    color: var(--fontColor2);
+    
+    font-size: 1.2rem;
+    line-height: 2.8rem;
+    text-decoration: none;
+    padding: 10px ;
+}
+
+#nav-left a:hover {
+    background-color: var(--mainColor3);
+}
+
+#nav-right{
+    position: relative;
+}
+
+#nav-right a, #setting-icon  {
+    font-size: 2rem;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#nav-right .tool-tip{
+    background-color: #444;
+    color: #fff;
+    padding: 10px 15px;
+    margin-top: 3px;
+    border-radius: 5px;
+    font-size: 1rem;
+    position: absolute;
+    right: 50px;
+    width: 150px;
+    text-align: center;
+
+    opacity:0.1;
+    transition: 0.5s;
+}
+
+#setting-icon:hover .tool-tip{
+    opacity: 1;
+    transition: 0.5s;
+}
+
+
+/* ****************************************** */
+/* ********** Custom Settings Panel ********* */
+
+#pref-panel{
+    position: absolute;
+    right: 0px;
+    top: 48px;
+    background-color: #444;
+    padding: 5px;
+    border-radius: 5px;
+    color:#ddd;
+    font-size: 16px;
+    width: 280px;
+}
+#pref-panel button{
+    background-color: #666;
+    height: 25px;
+    padding: 2px 9px;
+    margin: 5px 12px 1px;
+    border-radius: 3px;
+    border:1px solid #fff;
+}
+#pref-panel button:hover{
+    /* background-color: #999; */
+    color: #fff;
+    box-shadow: 0px 0px 5px #fff;
+}
+#pref-panel input{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* *********************************************** */
+/* ******* Main container (same as header) ******* */
+/* *************** S E C T I O N S *************** */
+
+#main-container{
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 90px 0px 40px;
+}
+
+#main-container > section, footer{
+        position: relative;
+        border: 1px solid white;
+        padding: 20px;
+        margin-bottom: 2px;
+        background-color: rgba(255, 255, 255, 0.4);
+}
+/* line below to offset sections links (were too high) */
+details { position: absolute; top: -120px; left: 0; opacity: 0;}
+
+.textContent {
+    width: 80%;
+    margin: 0 auto;
+    }
+
+#youtube-section iframe, #map-section iframe {
+    width: 80%;
+    margin: 10px 10%;
+    height: 600px;
+}
+
+#video600 {
+    width: 80%; 
+    height: 600px;
+    margin: 10px auto 20px;
+
+    overflow: hidden;
+    position: relative;
+}
+#video-section video {
+    position: absolute;
+    bottom: 1px;
+}
+
+#audio-section audio{
+    width: 80%; 
+    max-height: 600px;
+    margin: 40px 10% 10px;
+}
+
+#map-section #find-div, #map-section #info-div {
+    width: 80%; 
+    margin: 1px 10% 10px;
+}
+
+#special-chars-section p {
+    margin: 10px 0;
+}
+
+.footer-menu {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ***************************** */
+/* ******* JS Animation ******** */
+
+#animation-section {
+    position: relative;
+    height: 400px;
+}
+
+#animation-section p{
+        position: absolute;
+        background-color: #fff;
+        filter: invert(1);
+        width: 5px; height: 5px;    
+}
+
+@keyframes dotsGone {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+
+/* ***************************** */
+/* ******* Image Gallery ******* */
+
+#gallery-contrainer {
+    position: relative;
+    width: 80%;
+    margin: 20px 10% 0px;
+    display: block;
+    color: #fff;
+    font-size: 3rem;
+}
+
+#gallery-contrainer img{
+    position: absolute;
+    width: 100%;
+    opacity: .2;
+    left: 0;
+    top: 0;
+    transition: opacity 0.8s ease;
+}
+
+.gallery-control{
+    position: absolute;
+    cursor: pointer;
+    top: 40%;
+}
+#gallery-left {
+    left: 5px;
+}
+#gallery-right {
+    right: 5px;
+}
+
+#gallery-list {
+    width: 80%;
+    margin: 0 10% 20px;
+    text-align: center;
+    
+}
+.gallery-dots {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: 0 3px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+}
+.gallery-dots:hover {
+    background-color: #444!important;
+}
+
+/* ***************************** */
+/* *** SECOND JS Animation 2 *** */
+
+#ballField{
+    position: relative;
+    height: 400px;
+    background-color: green;
+    margin: 20px 10%;
+    
+}
+#ball {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    cursor:crosshair;
+  }
+
+/* ******************************** */
+/* ************* Form ************* */
+
+#form-section form{
+    background-color: #008000;
+    color: #fff;
+    font-family: var(--mainFont);
+    padding: 25px 5% 40px;
+    margin: 20px 10%;
+}
+#form-section label{
+    display: inline-block;
+    margin: 15px 0 6px;
+}
+#form-section input, #form-section textarea{
+    width: 99%;
+    max-width: 500px;
+}
+
+#form-section .label-radio, #form-section .label-check{
+    width: 200px;
+    margin-top: 0px;
+}
+
+#form-section .input-radio, #form-section .input-check{
+    width: 15px;
+}
+
+/* ******************************** */
+/* ************* SVG  ************* */
+
+svg {
+    position: absolute; 
+    bottom: -29px;
+    width: 100%;
+}
+path {
+    stroke: #fff;
+    stroke-width: 2px;
+    fill: none;
+    stroke-dasharray: 150, 550;
+    stroke-dashoffset: 0;
+    animation: pulse 2s infinite linear;
+    }
+@keyframes pulse {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: 700;
+    }
+}
+
+/* ******************************************** */
+/* **************** RESPONSIVE ***************** */
+@media only screen and (max-width: 800px) {
+    nav{
+        height: 124px;;
+    }
+
+    #nav-bar {
+        position: relative;
+    }
+
+    #nav-left {
+        position: absolute;
+        left: -1px;
+        height: 44px;
+        border-left: 1px solid #FFE;
+        overflow: hidden;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    #nav-left:before{  /* sandwich menu icon */
+        content: '\2261';
+        font-size: 2rem;
+        margin-left: 15px;
+    }
+
+    #nav-left:hover {
+        
+        height: 440px; 
+    }
+
+    #nav-left a{
+        display: block;
+        padding: 0 10px;
+        background-color: var(--mainColor2);
+        text-align: center;
+    }
+
+    #nav-right {
+        position: absolute;
+        right: -1px;
+        border-right: 1px solid #FFE;
+    }
+
+    #nav-links {
+        display: block;
+    }
+
+    section h1, .animation-buttons {
+        text-align: center;
+    }
+}
