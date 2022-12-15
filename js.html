@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ePortfolio</title>
+    <link rel="stylesheet" href="./css/style.css"/>
+</head>
+
+<body>
+
+    <nav>
+        <header id="main-header">
+            <span>ePortfolio</span>
+            <svg width="700" height="75"  xmlns="http://www.w3.org/2000/svg">
+                <path d="M700,45 L585,45 L580,75 L565,0 L550,60 L540,25 L535,45 L1,45" />
+            </svg>
+            <span style="width: calc(100% - 700px);"></span>
+        </header>
+        <div id="nav-bar">
+            <div id="nav-left"><!-- MAIN MENU -->
+                <ul id="nav-links">
+
+                    <li><a href="#" onclick="window.history.back();" title="go back" id="goBack">
+                        &#10094
+                        </a>
+                    </li>
+                    <li><a href="#" onclick="window.history.forward();" title="go forward" id="goForward">
+                        &#10095
+                        </a>        
+                    </li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#animation-anchor">Animation</a></li>
+                    <li><a href="#gallery-anchor">Gallery</a></li>
+                    <li><a href="#video-anchor">Video</a></li>
+                    <li><a href="#audio-anchor">Audio</a></li>
+                    <li><a href="#form-anchor">Form</a></li>
+                    <li><a href="#map-anchor">Map</a></li>
+                </ul>
+            </div>
+
+            <div id="nav-right"><!-- SETTINGS MENU -->
+
+                <!-- SETTINGS ICON AND TOOL_TIP -->
+                <!-- <a id="setting-icon">&#9881</a> -->
+                <div id="setting-icon">
+                    <span class="tool-tip">
+                        Change Settings
+                    </span>
+                &#9881
+                </div>
+
+                <!-- FORM TO CHANGE USER SETTINGS -->
+                <div id="pref-panel" style="display: none;"><!-- HIDDEN -->
+                    <table class="pref-table">
+                        <tr><!-- FORM TO CHANGE BACKGROUND -->
+                            <td><p style="width: 150px;">Background Color</p></td>
+                            <td><input type="color" id="prefs-bg-color"></td>
+                        </tr>
+                        <tr><!-- FORM TO CHANGE FONT COLOR -->
+                            <td>Font Color</td>
+                            <td><input type="color" id="prefs-ft-color"></td>
+                        </tr>
+                        <tr><!-- FORM TO CHANGE FONT SIZE -->
+                            <td>Font Size</td>
+                            <td style="text-align: center;">
+                                <input type="range" id="prefs-ft-size" min="10" max="24"
+                                oninput="this.nextElementSibling.value = this.value">
+                                <output>..</output>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="text-align: center; padding-bottom: 5px;">
+                                <button id="prefs-save">Save</button>       
+                                <button id="prefs-cancel">Cancel</button>       
+                                <button id="prefs-default">Default</button>       
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div><!-- -----------END OF #nav-bar ---------------- -->
+    </nav>
+
+    <main id="main-container">
+        <section id="welcome">
+            <br><br>
+            <h1 id="welcome-user">Welcome</h1>
+
+            <!-- ----------- Buttons to reset user name -------------- -->
+            
+            <div class="welcome-buttons">
+                <button id="user-reset">Set user name</button>
+                <button onclick="localStorage.clear(); window.location.reload()">Clear user data</button>
+            </div>
+
+        
+        </section><!-- -----------END OF #welcome ---------------- -->
+
+        <section id="animation-section"><!-- ----------- ANIMATION -------------- -->
+            <details id="animation-anchor"></details>
+            <h1 id="animation">Animation</h1>
+            
+        </section><!-- ----------- END - ANIMATION -------------- -->
+    
+
+        <section id="animation-control-section"><!-- ANIMATION CONTROLS -->
+            <!-- <h1 id="animation-control">Animation Control</h1> -->
+            <div class="animation-buttons">
+                <button id="animStart">Start</button>
+                <button id="animStop">Stop</button>
+                <button id="animSpeedButton" style="line-height: 1.6rem;">Speed
+                    <input id="animSpeed" type="range" min="1" max="9" style="margin: 0 10px">
+                    <span></span>
+                </button>
+            </div>
+        </section><!-- END - ANIMATION CONTROLS -->
+
+
+
+        <section id="animation2-section"><!-- ANIMATION2 -->
+            <h1 id="animation2">Animation2</h1>
+            <div id="ballField">
+                <div id="ball"></div>            
+            </div>
+
+
+            <div class="animation-buttons">
+                <button id="anim2Start">Start</button>
+                <button id="anim2Stop">Stop</button>
+                <button id="anim2SpeedButton" style="line-height: 2rem;">Speed
+                    <input id="anim2Speed" type="range" min="1" max="9" style="margin: 0 10px">
+                    <span></span>
+                </button>
+            </div>
+        </section><!-- END - ANIMATION 2 -->
+
+        <section id="gallery-section"><!-- ----------- GALLERY----------- -->
+            <details id="gallery-anchor"></details>
+            <h1 id="gallery">Images Gallery</h1>
+            <div id="gallery-contrainer">
+                <img src="./images/car01-800x450.jpg" alt="Porsche01" style="position:unset" />
+                <img src="./images/car02-800x450.jpg" alt="Porsche02">
+                <img src="./images/car03-800x450.jpg" alt="Porsche03">
+                <img src="./images/car04-800x450.jpg" alt="Porsche04">
+                <img src="./images/car05-800x450.jpg" alt="Porsche05">
+                <img src="./images/car06-800x450.jpg" alt="Porsche06">
+                <img src="./images/car07-800x450.jpg" alt="Porsche07">
+                <img src="./images/car08-800x450.jpg" alt="Porsche08">
+                <img src="./images/car09-800x450.jpg" alt="Porsche09">
+                <img src="./images/car10-800x450.jpg" alt="Porsche10">
+
+                <div class="gallery-control" id="gallery-left" onclick="galleryLeft()">&#10094</div>
+                <div class="gallery-control" id="gallery-right" onclick="galleryRight()">&#10095</div>
+            </div>
+            <div id="gallery-list">
+                <div class="gallery-dots" id="galleryDot00"></div>
+                <div class="gallery-dots" id="galleryDot01"></div>
+                <div class="gallery-dots" id="galleryDot02"></div>
+                <div class="gallery-dots" id="galleryDot03"></div>
+                <div class="gallery-dots" id="galleryDot04"></div>
+                <div class="gallery-dots" id="galleryDot05"></div>
+                <div class="gallery-dots" id="galleryDot06"></div>
+                <div class="gallery-dots" id="galleryDot07"></div>
+                <div class="gallery-dots" id="galleryDot08"></div>
+                <div class="gallery-dots" id="galleryDot09"></div>
+            </div>
+
+        </section> <!-- ----------- END - GALLERY----------- -->         
+
+
+
+
+        <section id="youtube-section"><!-- ----------- YOUTUBE -------------- -->
+            <h1 id="youtube">Youtube</h1>
+            <iframe 
+            src="https://www.youtube.com/embed/HYT8YxFYD74" loading="lazy">
+            </iframe>
+        </section> <!-- ----------- END - YOUTUBE -------------- -->
+        
+
+
+        <section id="video-section"><!-- ----------- VIDEO -------------- -->
+            <details id="video-anchor"></details>
+            <h1 id="video">Videos</h1>
+            <div id="video600">
+                <video controls style="width:100%;">
+                    <source src="./media/clouds-short.mp4" type="video/mp4">
+                    <!--source src="movie.ogg" type="video/ogg"-->
+                    Your browser does not support the video tag.
+                </video>    
+            </div>
+        </section> <!-- ----------- END - VIDEO -------------- -->
+        
+
+
+        <section id="audio-section"><!-- ----------- AUDIO -------------- -->
+            <details id="audio-anchor"></details>
+            <h1 id="audio">Audio</h1>
+            <audio controls>
+                <source src="./media/piano-short.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio> 
+        </section> <!-- ----------- END - AUDIO -------------- -->
+        
+
+        
+        <section id="form-section"><!-- ------------------ FORM ------------------ -->
+            <details id="form-anchor"></details>
+            <h1 id="form">Form</h1>
+            <form action="#">
+                <h2 id="form">Contact Form</h2>
+                <label for="name"><b>Name:</b></label><br>
+                <input type="text" id="name" required><br>
+                <label for="email"><b>Email:</b></label><br>
+                <input type="email" id="email" required><br>
+                <label for="dob"><b>Date of Birth:</b></label><br>
+                <input type="date" id="dob" required><br>
+                <label for="age"><b>Age:</b></label><br>
+                <input type="number" id="age" required><br>
+
+                <label><b>Gender:</b></label><br>
+                
+                <label class="label-radio" for="gender-m">Male</label>
+                <input class="input-radio" type="radio" id="gender-m" name="radio-button-group" value="m" required><br>
+                <label class="label-radio" for="gender-f">Female</label>
+                <input class="input-radio" type="radio" id="gender-f" name="radio-button-group" value="f"><br>
+                <label class="label-radio" for="gender-o">Other</label>
+                <input class="input-radio" type="radio" id="gender-o" name="radio-button-group" value="o"><br>
+
+                <label for="course"><b>Course Name:</b></label><br>
+                <select id="course" required>
+                  <option value="">Select a course name</option>
+                  <option value="sd">Software Development</option>
+                  <option value="pj">Programming with Java</option>
+                  <option value="sp">Safe Pass</option>
+                </select><br>
+
+                <label><b>Course Type:</b></label><br>
+                <label class="label-check" for="checkbox-ft">Full-time</label>
+                <input class="input-check" type="checkbox" id="checkbox-ft" value="ft" required><br>
+                <label class="label-check" for="checkbox-ptd">Part-time-day</label>
+                <input class="input-check" type="checkbox" id="checkbox-ptd" value="ptd"><br>
+                <label class="label-check" for="checkbox-pte">Part-time-evening</label>
+                <input class="input-check" type="checkbox" id="checkbox-pte" value="pte"><br>
+
+                <label for="message"><b>Message:</b></label><br>
+                <textarea id="message" rows="8" cols="30" required ></textarea><br>
+                <button id="form-submit" type="submit">Submit</button>
+                <button id="form-submit" type="reset">Reset</button>
+              </form>
+              
+        </section><!-- ----------- END FORM -------------- -->
+        
+
+
+        <section id="map-section"><!-- -------------------- MAP ---------------------- -->
+            <details id="map-anchor"></details>
+            <h1 id="map">Map</h1>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d19077.27170460005!2d-6.2593887!3d53.3455856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sie!4v1670487361166!5m2!1sen!2sie" 
+            id="gMap" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <div id="find-div">
+                <button id="find-me">Show my location</button>
+                <p id="status"> </p>
+                <p id="co-ords"> </p>
+            </div>
+            <div id="info-div">
+                <button id="info-me">Show more info</button>
+                <p></p>
+            </div>
+
+        </section><!-- ----------- END MAP -------------- -->
+        
+
+
+        <section id="special-chars-section"><!-- ----------- SPECIAL CHARS -------------- -->
+            <h1 id="special-chars">Special Characters</h1>
+            <div class="textContent">
+                <p>
+                    Special HTML characters  are characters that have special HTML codes 
+                    associated with them to ensure that they show up correctly in Web browsers.
+                </p>
+                <p>
+                    Example of commonly used special HTML characters are:
+                </p>
+                <ul>
+                    <li>Copyringt sign &copy; - &amp;copy;</li>
+                    <li>Trademark sign &trade; - &amp;trade;</li>
+                    <li>Pound sterling &pound; - &amp;pound;</li>
+                    <li>Euro sign &euro; - &amp;euro;</li>
+                </ul>
+                <P>
+                    Although CSS enables richer text formatting, there are a few HTML5 tags 
+                    that are good for adding special formatting to text when using specific 
+                    CSS is not convinient. <br>Following are some of these tags
+                </P>
+                <ul>
+                    <li>
+                        Superscript text <span><</span>sup<span>></span><span><</span>/sup<span>></span> 
+                        - Example for <sup>superscript</sup> text.
+                    </li>
+                    <li>
+                        Subscript text <span><</span>sub<span>></span><span><</span>/sub<span>></span> 
+                        - Example for <sub>subscript</sub> text.
+                    </li>
+                    <li>
+                        Strikethrough text <span><</s>s<span>></span><span><</s>/s<span>></span> 
+                        - Example for <s>strikethrough</s> text.
+                    </li>
+                    <li>
+                        Monospaced text, preserving spaces and line breaks <span><</s>pre<span>></span><span><</s>/pre<span>></span> 
+                    </li>
+                </ul>
+                <pre>
+                    Example 
+                for monospaced 
+                            text
+                </pre>
+                
+            </div>
+            
+        </section> <!-- ----------- END - SPECIAL CHARS -------------- -->
+
+
+
+    </main><!-- -----------END OF #main-container ---------------- -->
+    <footer>
+        <div class="footer-menu">
+            <a href="mailto:sapinskise@fastallaght.com">
+                &copy Seweryn Sapinski 
+            </a>
+             &nbsp -
+            C&#38G number GPW 9558
+        </div>
+    </footer>
+
+<script src="./js/main.js"></script>
+
+</body>
+</html>
